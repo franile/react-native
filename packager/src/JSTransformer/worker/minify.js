@@ -21,6 +21,7 @@ function minify(filename: string, code: string, sourceMap: ?string) {
     inSourceMap: sourceMap,
     outSourceMap: true,
     output: UGLIFY_JS_OUTPUT_OPTIONS,
+    mangle: false,
   });
 
   minifyResult.map = JSON.parse(minifyResult.map);
